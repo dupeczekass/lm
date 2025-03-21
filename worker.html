@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Panel - Lemonade Rewards</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "qrcode": "https://cdn.jsdelivr.net/npm/qrcode@1.5.0/+esm"
+        }
+    }
+    </script>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="worker.js"></script>
+</head>
+<body class="worker-page">
+    <div id="workerLogin" class="modal-content">
+        <h2>Worker Login</h2>
+        <div class="login-form">
+            <input type="password" id="workerPin" placeholder="Enter worker PIN">
+            <button id="loginButton">Login</button>
+            <p id="loginError" class="error-message"></p>
+        </div>
+    </div>
+    <div id="workerPanel" class="hidden">
+        <div class="modal-content">
+            <h2>Worker Panel</h2>
+            <div class="client-lookup">
+                <input type="text" id="clientLookupId" placeholder="Enter 4-digit Client ID">
+                <button id="lookupClient">Look Up Client</button>
+            </div>
+            <div id="clientDetails" class="hidden">
+                <h3>Client Details</h3>
+                <div class="client-stats">
+                    <p>Points: <span id="clientPoints" class="stat-value">0</span></p>
+                    <p>Stamps: <span id="clientStamps" class="stat-value">0</span></p>
+                </div>
+                <div class="client-actions">
+                    <button id="addClientPoints">Add Points</button>
+                    <button id="addClientStamp">Add Stamp</button>
+                </div>
+                <div class="redemption-history">
+                    <h4>Recent Redemptions</h4>
+                    <div id="clientRedemptions"></div>
+                </div>
+            </div>
+        </div>
+        <button id="returnToMain">Return to Main Page</button>
+    </div>
+</body>
+</html>
+

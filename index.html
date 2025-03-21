@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lemonade Royalty Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+        "imports": {
+            "qrcode": "https://cdn.jsdelivr.net/npm/qrcode@1.5.0/+esm"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-front">
+                <img src="lemonadelogo1.png" class="lemon-logo" alt="Lemonade Logo">
+                <h1 data-translate="title">Lemonade Rewards</h1>
+                <div class="stamps">
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                    <div class="stamp"><img src="lemonadelogo1.png" alt="Lemonade Stamp"></div>
+                </div>
+                <div class="info-text">
+                    <p data-translate="clickStamps">🎉 Click on empty stamps to collect them!</p>
+                    <p data-translate="rewardTiers">🎁 Reward Tiers:</p>
+                    <p>• 3 stamps = 1 free drink</p>
+                    <p>• 5 stamps = 2 free drinks</p>
+                    <p>• 10 stamps = 3 free drinks</p>
+                </div>
+            </div>
+        </div>
+        <div class="offers-section">
+            <div class="points-display">0 Points</div>
+            <h2 data-translate="specialOffers">Special Offers</h2>
+            <div class="offers-content"></div>
+            <div class="points-rewards">
+                <div class="points-reward" data-reward="0">
+                    Redeem 10 Points for 100g Free Popcorn
+                </div>
+                <div class="points-reward" data-reward="1">
+                    Redeem 18 Points for Free Lemonade
+                </div>
+            </div>
+        </div>
+        <div class="settings-panel">
+            <h2 data-translate="settings">Settings</h2>
+            <div class="settings-option">
+                <label data-translate="language">Language</label>
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="pl">Polski</option>
+                </select>
+            </div>
+            <div class="settings-option">
+                <label data-translate="theme">Theme</label>
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </div>
+        <div class="history-panel">
+            <h2 data-translate="history">Redemption History</h2>
+            <div id="historyContent"></div>
+        </div>
+        <div class="client-info">
+            <h3>Your Client ID: <span id="clientId"></span></h3>
+            <div id="qrCode"></div>
+        </div>
+        <button id="redeem">Not Enough Stamps</button>
+        <div class="auth-controls">
+            <span id="authStatus">👤 Customer Mode</span>
+            <button id="workerAuth">Worker Login</button>
+            <button id="workerLogout" class="hidden">Logout</button>
+        </div>
+    </div>
+</body>
+</html>
